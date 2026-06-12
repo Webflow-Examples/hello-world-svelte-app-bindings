@@ -30,3 +30,6 @@ npm-debug.log*
 # env files
 .env*
 !.env.example
+
+# Local secrets (wrangler)
+.dev.vars

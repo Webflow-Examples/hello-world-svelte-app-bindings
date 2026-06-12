@@ -11,6 +11,8 @@
     "cf:types": "wrangler types"
   },
   "dependencies": {
+    "@sentry/cloudflare": "^10.57.0",
+    "@sentry/svelte": "^10.57.0",
     "svelte": "^5.34.7"
   },
   "devDependencies": {

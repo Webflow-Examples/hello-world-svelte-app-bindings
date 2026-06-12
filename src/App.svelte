@@ -2,6 +2,7 @@
   import WebflowLogo from './lib/WebflowLogo.svelte';
   import DocCard from './lib/DocCard.svelte';
   import BindingsStatus from './lib/BindingsStatus.svelte';
+  import SentryPinger from './lib/SentryPinger.svelte';
 
   const FRAMEWORK = 'Svelte 5 + Vite';
 
@@ -64,6 +65,8 @@
     </section>
 
     <BindingsStatus />
+
+    <SentryPinger />
 
     <section class="wf-cards" aria-label="Documentation" style="margin-top: 32px">
       {#each DOC_LINKS as l (l.href)}
