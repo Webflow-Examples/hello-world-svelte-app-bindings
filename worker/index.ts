@@ -2,6 +2,7 @@
 
 import { handleBindingStatus } from "./routes/binding-status";
 import { handleEnvDebug } from "./routes/env-debug";
+import { handleEnvCheck } from "./routes/env-check";
 
 export interface Env {
   DB: D1Database;
@@ -16,6 +17,10 @@ export default {
     const url = new URL(request.url);
     const apiIndex = url.pathname.indexOf("/api/");
     const path = apiIndex !== -1 ? url.pathname.slice(apiIndex) : url.pathname;
+
+    if (path === "/api/env-check") {
+      return handleEnvCheck(request, env);
+    }
 
     if (path === "/api/env-debug") {
       return handleEnvDebug(request, env);
